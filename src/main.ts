@@ -38,6 +38,17 @@ for (const link of menuLinks) {
 // 4. Skapa ett nytt p-element (document.createElement), ge det texten
 //    "Dagens tips: prova en kardemummabulle." och lägg det sist i #hero med append.
 
+let paragraph = document.createElement("p");
+paragraph.textContent = "Dagens tips: prova en kardemummabulle.";
+
+let heroElement = document.getElementById("hero");
+
+if (heroElement) {
+  heroElement.append(paragraph);
+} else {
+  console.log("The value is missing.");
+}
+
 // 5. Lägg klassen "dagens" på #hero med classList.add. Ta bort den med classList.remove.
 
 // 6. Säkerhetsförsök: sätt p.innerHTML = '<img src="x" onerror="console.log(\'Attack!\')">'
