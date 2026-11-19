@@ -80,4 +80,19 @@ if (p) {
 // 8. Anropa visaMeny med menyn, och uppdateraRubrik med antalet rätter.
 // 9. Dagens rätt = den billigaste lunchen. Använd filter och billigast (från meny.js)
 //    och markeraDagensRatt.
-// TODO
+
+const menyRubrik = document.querySelector<HTMLElement>("#meny-rubrik");
+const menyLista = document.querySelector<HTMLElement>("#meny-lista");
+
+if (menyRubrik) {
+  uppdateraRubrik(menyRubrik, meny.length);
+}
+
+if (menyLista) {
+  visaMeny(menyLista, meny);
+
+  const ratt = billigast(meny);
+  if (ratt) {
+    markeraDagensRatt(menyLista, ratt.id);
+  }
+}
