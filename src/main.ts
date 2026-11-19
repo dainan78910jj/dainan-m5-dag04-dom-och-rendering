@@ -51,6 +51,16 @@ if (heroElement) {
 
 // 5. Lägg klassen "dagens" på #hero med classList.add. Ta bort den med classList.remove.
 
+const k = document.querySelector("#hero");
+
+if (k) {
+  k.classList.add("dagens");
+} else {
+  console.log("The value is missing.");
+}
+
+k?.classList.remove("dagens");
+
 // 6. Säkerhetsförsök: sätt p.innerHTML = '<img src="x" onerror="console.log(\'Attack!\')">'
 //    Vad händer i Console? Byt sedan till p.textContent med samma text. Vad händer nu?
 
