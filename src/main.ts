@@ -96,3 +96,6 @@ if (menyLista) {
     markeraDagensRatt(menyLista, ratt.id);
   }
 }
+
+// Steg 10. Prova tomt-läget
+// User will see 'Inga rätter hittades.'
