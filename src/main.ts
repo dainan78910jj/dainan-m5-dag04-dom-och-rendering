@@ -63,6 +63,17 @@ k?.classList.remove("dagens");
 
 // 6. Säkerhetsförsök: sätt p.innerHTML = '<img src="x" onerror="console.log(\'Attack!\')">'
 //    Vad händer i Console? Byt sedan till p.textContent med samma text. Vad händer nu?
+const p = document.querySelector("p");
+// if (p) {
+//   p.innerHTML = '<img src="x" onerror="console.log(\'Attack!\')">';
+// }
+
+if (p) {
+  p.textContent = '<img src="x" onerror="console.log(\'Attack!\')">';
+}
+
+// • innerHTML: If untrusted user input contains injected <script> tags or malicious event handlers.
+// • textContent: Automatically escapes HTML characters and renders them safely as literal text, completely eliminating script execution risks.
 
 // DEL 2: koppla ihop med funktionerna i ui.js ----------------------------
 // 7. Hämta #meny-lista och #meny-rubrik.
